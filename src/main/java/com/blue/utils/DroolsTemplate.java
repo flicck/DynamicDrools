@@ -7,6 +7,7 @@ public class DroolsTemplate {
             "global org.slf4j.Logger logger\n"+
             "@{Bean}\n" +
             "rule \"@{RuleName}\"\n" +
+            "@{NoLoop}\n" +
             "@{Salience}\n" +
             "\n" +
             "    when\n" +

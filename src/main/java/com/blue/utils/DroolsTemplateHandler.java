@@ -17,32 +17,37 @@ public class DroolsTemplateHandler {
         wipeAllEL();
         return expression;
     }
-    public  DroolsTemplateHandler replacePackage(String packageName){
+    public  DroolsTemplateHandler setPackage(String packageName){
         this.setExpression(expression.replace("@{Package}",packageName));
         return this;
     }
-    public  DroolsTemplateHandler replaceBean(String beanDescription){
+    public  DroolsTemplateHandler setBean(String beanDescription){
         this.setExpression(expression.replace("@{Bean}",beanDescription));
         return this;
     }
-    public  DroolsTemplateHandler replaceRuleName(String ruleName){
+    public  DroolsTemplateHandler setRuleName(String ruleName){
         this.setExpression(expression.replace("@{RuleName}",ruleName));
         return this;
     }
-    public  DroolsTemplateHandler replaceLeft(String leftHand){
+    public  DroolsTemplateHandler setLeft(String leftHand){
         this.setExpression(expression.replace("@{Left}",leftHand));
         return this;
     }
-    public  DroolsTemplateHandler replaceRight(String rightHand){
+    public  DroolsTemplateHandler setRight(String rightHand){
         this.setExpression(expression.replace("@{Right}",rightHand));
         return this;
     }
-    public  DroolsTemplateHandler replaceSalience(Integer salience){
+    public  DroolsTemplateHandler setSalience(Integer salience){
         this.setExpression(expression.replace("@{Salience}","salience "+salience.toString()));
         return this;
     }
-    private   DroolsTemplateHandler wipeAllEL(){
-        this.setExpression(expression.replaceAll("@\\{.*}",""));
+    public DroolsTemplateHandler setNoLoop(Boolean noLoop){
+        if(noLoop){
+            this.setExpression(expression.replace("@{NoLoop}","no-loop true"));
+        }
         return this;
+    }
+    private void wipeAllEL(){
+        this.setExpression(expression.replaceAll("@\\{.*}",""));
     }
 }

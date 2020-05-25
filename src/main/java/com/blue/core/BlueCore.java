@@ -25,12 +25,12 @@ public class BlueCore {
 
         String expression = DroolsTemplate.common;
         final DroolsTemplateHandler handler = new DroolsTemplateHandler(expression);
-        final String result = handler.replaceBean(bean)
-                .replacePackage("common")
-                .replaceRuleName(UUID.randomUUID().toString())
-                .replaceLeft("")
-                .replaceRight(right)
-                .replaceSalience(100)
+        final String result = handler.setBean(bean)
+                .setPackage("common")
+                .setRuleName(UUID.randomUUID().toString())
+                .setLeft("")
+                .setRight(right)
+                .setSalience(100)
                 .getExpression();
 
         System.out.println(result);
@@ -40,11 +40,11 @@ public class BlueCore {
         String right2 = " System.out.println('哈哈 执行成功');";
         String expression2 = DroolsTemplate.common;
         final DroolsTemplateHandler handler2 = new DroolsTemplateHandler(expression2);
-        final String result2 = handler2.replacePackage("common")
-                .replaceRuleName(UUID.randomUUID().toString())
-                .replaceLeft(left2)
-                .replaceRight(right2)
-                .replaceSalience(99)
+        final String result2 = handler2.setPackage("common")
+                .setRuleName(UUID.randomUUID().toString())
+                .setLeft(left2)
+                .setRight(right2)
+                .setSalience(99)
                 .getExpression();
 
         System.out.println(result2);
