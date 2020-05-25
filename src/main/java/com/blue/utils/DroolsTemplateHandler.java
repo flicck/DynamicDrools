@@ -14,6 +14,7 @@ public class DroolsTemplateHandler {
     }
 
     public String getExpression() {
+        wipeAllEL();
         return expression;
     }
     public  DroolsTemplateHandler replacePackage(String packageName){
@@ -40,7 +41,7 @@ public class DroolsTemplateHandler {
         this.setExpression(expression.replace("@{Salience}","salience "+salience.toString()));
         return this;
     }
-    public  DroolsTemplateHandler wipeAllEL(){
+    private   DroolsTemplateHandler wipeAllEL(){
         this.setExpression(expression.replaceAll("@\\{.*}",""));
         return this;
     }

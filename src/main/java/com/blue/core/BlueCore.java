@@ -31,7 +31,6 @@ public class BlueCore {
                 .replaceLeft("")
                 .replaceRight(right)
                 .replaceSalience(100)
-                .wipeAllEL()
                 .getExpression();
 
         System.out.println(result);
@@ -46,7 +45,6 @@ public class BlueCore {
                 .replaceLeft(left2)
                 .replaceRight(right2)
                 .replaceSalience(99)
-                .wipeAllEL()
                 .getExpression();
 
         System.out.println(result2);
