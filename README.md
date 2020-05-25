@@ -1,2 +1,2 @@
 # DynamicDrools
-动态的加载drools规则的demo
+链式调用动态生成rules并传入drools执行的的demo
