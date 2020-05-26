@@ -9,6 +9,13 @@ public class DroolsTemplate {
             "rule \"@{RuleName}\"\n" +
             "@{NoLoop}\n" +
             "@{Salience}\n" +
+            "@{LockOnActive}\n" +
+            "@{Enabled}\n" +
+            "@{Dialect}\n" +
+            "@{ActivationGroup}\n" +
+            "@{AgendaGroup}\n" +
+            "@{AutoFocus}\n" +
+            "@{Timer}\n" +
             "\n" +
             "    when\n" +
             "        @{Left}\n" +
