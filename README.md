@@ -8,4 +8,4 @@
                 `.setLeft("")`    
                 `.setRight(right)`    
                 `.setSalience(100)`    
-                `.getExpression();`
+                `.build();`
