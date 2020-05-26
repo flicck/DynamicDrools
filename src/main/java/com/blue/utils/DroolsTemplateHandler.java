@@ -16,7 +16,7 @@ public class DroolsTemplateHandler {
         this.expression = expression;
     }
 
-    public String getExpression() {
+    public String build() {
         wipeAllEL();
         return expression;
     }

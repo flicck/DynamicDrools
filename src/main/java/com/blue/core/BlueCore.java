@@ -31,7 +31,7 @@ public class BlueCore {
                 .setLeft("")
                 .setRight(right)
                 .setSalience(100)
-                .getExpression();
+                .build();
 
         System.out.println(result);
         System.out.println("-------------------------------------------------");
@@ -45,7 +45,7 @@ public class BlueCore {
                 .setLeft(left2)
                 .setRight(right2)
                 .setSalience(99)
-                .getExpression();
+                .build();
 
         System.out.println(result2);
         KieHelper helper = new KieHelper();
