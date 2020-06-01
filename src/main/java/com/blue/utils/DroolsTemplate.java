@@ -1,9 +1,11 @@
 package com.blue.utils;
-/** wanghan
+/** wanghan https://github.com/flicck
  * drools规则模板
+ * 2020-06-01
  */
 public class DroolsTemplate {
     public static String common ="package @{Package};\n" +
+            "@{Import}\n"+
             "global org.slf4j.Logger logger\n"+
             "@{Bean}\n" +
             "rule \"@{RuleName}\"\n" +
